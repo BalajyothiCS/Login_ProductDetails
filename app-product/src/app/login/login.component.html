@@ -1,0 +1,29 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxFill>
+    <mat-card>
+        <img mat-card-image src="../../assets/images/img.png" alt="logo">
+    </mat-card>
+    <mat-card>
+        <mat-card-title fxLayoutAlign="center">Login</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="submit()">
+                <mat-form-field class="form-width">
+                    <mat-label>User ID</mat-label>
+                    <input type="text" matInput formControlName="userId">
+                    <mat-error *ngIf="loginForm.get('userId').hasError('required') && loginForm.get('userId').touched">UserID required</mat-error>
+                </mat-form-field>
+                <p>
+                    <mat-form-field class="form-width">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput formControlName="password">
+                        <mat-error *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">Password required</mat-error>
+                        <mat-error *ngIf="loginForm.get('password').hasError('pattern') && loginForm.get('password').touched">Password must be at least 8 characters<br>
+                            <br>Your Password must contain atleast one uppercase,one lowercase,one number and one special character </mat-error>
+                    </mat-form-field>
+                </p>
+                <div fxLayoutAlign="center" class="button-wrapper">
+                    <button mat-raised-button color="primary" [disabled]="loginForm.invalid">LOGIN</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,12 @@
+<div fxLayout="column" fxLayout.xs="column" fxLayoutAlign="start center" fxFill *ngIf="productData">
+    <h2> {{productData.name | uppercase}}</h2>
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="50px" fxLayoutGap.xs="0px" fxLayoutAlign="center center">
+        <img mat-card-image src="{{productData.imageUrl}}" alt={{productData.name}}>
+        <div fxFlex="30" class="info">
+            <h2 matLine> {{productData.price}} </h2>
+            <button mat-raised-button color="primary" [disabled]="!productData.availability">ADD CART</button>
+            <h4> Description : </h4>
+            <p matLine><span> {{productData.description}} </span></p>
+        </div>
+    </div>
+</div>

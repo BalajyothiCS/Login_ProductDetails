@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Suits & Sets",
+    "description": "Baby Boy Clothing Star Print Short Sleeve Tshirt Pant Yellow 2PCS Set Summer Baby Girls Clothes Set Purple Roupa De Bebes.",
+    "price": "170.00",
+    "imageUrl": "/assets/images/boy_store_img.jpg",
+    "availability": true
+  },
+  {
+    "id": 2,
+    "name": "Suits & Sets",
+    "description": "Cotton Boys Girls Summer Suit Kids Children Tshirt + Pant Set Clothing Gift",
+    "price": "302.00",
+    "imageUrl": "/assets/images/girl_store_img.jpg",
+    "availability": false
+  }
+]
