@@ -20,6 +20,9 @@
                             <br>Your Password must contain atleast one uppercase,one lowercase,one number and one special character </mat-error>
                     </mat-form-field>
                 </p>
+                <ngx-recaptcha2 *ngIf="count >=3" [siteKey]="'6LeOZ4YUAAAAAJ8clQYNtOXNDHsd58KZHyJeILk6'" [useGlobalDomain]="false" formControlName="captcha">
+                </ngx-recaptcha2>
+                <mat-error *ngIf="loginForm.get('captcha').hasError('required')">Invalid Captcha</mat-error>
                 <div fxLayoutAlign="center" class="button-wrapper">
                     <button mat-raised-button color="primary" [disabled]="loginForm.invalid">LOGIN</button>
                 </div>
